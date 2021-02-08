@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="JSienickiCh01GuitarShop" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\justi\\OneDrive\\Desktop\\Spring\ 2021\\INFS\ 4950-001\ WebAppDev\\MTSU_INFS-4950_WebAppDev-\\Ch01GuitarShop_Start\\Ch01GuitarShop\\GuitarShop\\obj\\Release\\netcoreapp3\.1\\PubTmp\\Out\\$" />
+  </parameter>
+</parameters>
