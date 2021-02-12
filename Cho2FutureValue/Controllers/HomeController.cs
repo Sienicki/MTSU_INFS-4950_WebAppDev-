@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Cho2FutureValue.Models;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,11 +11,22 @@ namespace Cho2FutureValue.Controllers
     {
         public IActionResult Index()
         {
-            ViewBag.Name = "Mary";
-            ViewBag.FV = "99999.99";
-
-
+            ViewBag.FV = 0;
             return View();
+        }
+        [HttpPost]
+        public IActionResult Index(FutureValueModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                ViewBag.FV = model.CalculateFutureValue();
+            }
+            else
+            {
+                ViewBag.FV = 0;
+            }
+            
+            return View(model);
         }
     }
 }
