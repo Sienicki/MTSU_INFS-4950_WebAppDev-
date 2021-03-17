@@ -1,0 +1,17 @@
+﻿.jumbotron h1{
+    font-size: 4rem;
+}
+.row {
+    margin-bottom: .5rem;
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: .5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+html {
+    background: rgb(204, 255, 235);
+}
+.container-fluid {
+    background: rgb(204, 255, 235);
+}

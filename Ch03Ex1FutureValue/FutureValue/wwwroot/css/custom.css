@@ -1,0 +1,22 @@
+﻿.row {
+    margin-bottom: .5rem;
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: .5rem;
+    background-color: lightsteelblue;
+}
+
+.container{
+    border: 2px solid #cccccc;
+}
+
+.jumbotron{
+    background-color: #cecece;
+}
+
+.jumbotron h1{
+    margin: 1rem;
+    color: navy;
+    font-size: 300%;
+}
+
