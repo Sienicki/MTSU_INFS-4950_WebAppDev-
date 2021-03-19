@@ -60,5 +60,20 @@ namespace Ch04MovieList.Controllers
                 return View("AddEdit", movie);
             }
         }
+        //GET Delete Movie
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            var model = context.Movies.Find(id);
+            return View("Delete", model);
+        }
+        //Post Delete Movie
+        [HttpPost]
+        public IActionResult Delete(Movie movie)
+        {
+            context.Movies.Remove(movie);
+            context.SaveChanges();
+            return RedirectToAction("Index", "Home");
+        }
     }
 }
