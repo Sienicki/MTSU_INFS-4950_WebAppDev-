@@ -21,6 +21,9 @@ namespace Ch04MovieList.Models
         public string GenreId { get; set; }
         public Genre Genre { get; set; }
 
+        //Slug includes Movie Name and Year, Lower Case, Replace spaces with -
+        public string Slug =>
+            Name?.Replace(" ", "-").ToLower() + Year?.ToString();
 
     }
 }
