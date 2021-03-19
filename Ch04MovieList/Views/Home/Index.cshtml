@@ -25,7 +25,7 @@
                 <td>@movie.Genre.Name</td>
                 <td>
                     <a asp-controller="Movie" asp-action="Edit" asp-route-id="@movie.MovieId">Edit</a>
-                    <a href="/">Delete</a>
+                    <a asp-controller="Movie" asp-action="Delete" asp-route-id="@movie.MovieId">Delete</a>
                 </td>
             </tr>
         }
