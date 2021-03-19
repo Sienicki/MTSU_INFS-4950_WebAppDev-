@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/ch04movielistdbserver2/databases/Ch04MovieList_db",
+      "type": "mssql.azure",
+      "connectionId": "MovieContext",
+      "secretStore": "AzureAppSettings"
+    }
+  }
+}
