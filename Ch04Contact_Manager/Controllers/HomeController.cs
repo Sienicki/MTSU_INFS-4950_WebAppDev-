@@ -22,7 +22,6 @@ namespace Ch04ContactManager.Controllers
         {
             var contacts = context.Contacts
                 .Include(c => c.Category)
-                .Where(c => c.Category.Name == "Friend")
                 .OrderBy(c => c.ContactID)
                 .ToList();
             return View(contacts);
