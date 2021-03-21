@@ -38,7 +38,7 @@ namespace Ch04ContactManager.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (contact.ContactID == 0)
+                if (contact.ContactId == 0)
                 {
                     contact.DateAdded = DateTime.Now;
                     context.Contacts.Add(contact);
@@ -52,7 +52,7 @@ namespace Ch04ContactManager.Controllers
             }
             else
             {
-                ViewBag.Action = (contact.ContactID == 0) ? "Add" : "Edit";
+                ViewBag.Action = (contact.ContactId == 0) ? "Add" : "Edit";
                 ViewBag.Action = context.Categories.OrderBy(c => c.Name).ToList();
                 return View("AddEdit", contact);
             }
@@ -61,7 +61,7 @@ namespace Ch04ContactManager.Controllers
         [HttpGet]
         public IActionResult Delete(int id)
         {
-            var model = context.Categories.Find(id);
+            var model = context.Contacts.Find(id);
             return View("Delete", model);
         }
         //Post Delete
@@ -71,6 +71,15 @@ namespace Ch04ContactManager.Controllers
             context.Contacts.Remove(contact);
             context.SaveChanges();
             return RedirectToAction("Index", "Home");
+        }
+        //Get Details
+        [HttpGet]
+        public IActionResult Details(int id)
+        {
+            ViewBag.Action = "Details";
+            ViewBag.Categories = context.Categories.OrderBy(c => c.Name).ToList();
+            var model = context.Contacts.Find(id);
+            return View("Details", model);
         }
     }
 }

@@ -1,0 +1,38 @@
+﻿@model Contact
+
+@{
+    ViewBag.Title ="Contact Details";
+}
+<h2>@ViewBag.Title</h2>
+
+
+<form asp-action="Details" method="get">
+
+    <div class="form-group">
+        <label asp-for="F_Name">First Name</label>
+        <label asp-for="F_Name"></label>
+    </div>
+    <div class="form-group">
+        <label>@ViewBag.L_Name</label>
+    </div>
+    <div class="form-group">
+        <label>@ViewBag.PhoneNumber</label>
+    </div>
+    <div class="form-group">
+        <label>@ViewBag.EmailAddress</label>
+    </div>
+    <div class="form-group">
+        <label>@ViewBag.Category</label>
+    </div>
+    <div class="form-group">
+        <label>@ViewBag.Organization</label>
+    </div>
+    <div class="form-group">
+        <label>@ViewBag.DateAdded</label>
+    </div>
+
+
+
+    <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Home</a>
+
+</form>

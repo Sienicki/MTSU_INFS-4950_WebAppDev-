@@ -9,7 +9,7 @@ namespace Ch04ContactManager.Models
 {
     public class Contact
     {
-        public int ContactID { get; set; }
+        public int ContactId { get; set; }
         [Required(ErrorMessage= "Please enter a first name: ")]
         public string F_Name { get; set; }
         [Required(ErrorMessage = "Please enter a last name: ")]
@@ -20,8 +20,11 @@ namespace Ch04ContactManager.Models
         public string? EmailAddress { get; set; }
         public string Organization { get; set; }
         public DateTime DateAdded { get; set; }
+        [Range(1,100000000)]
         public int CategoryId { get; set; }
         public Category Category { get; set; }
+
+        
 
 
 

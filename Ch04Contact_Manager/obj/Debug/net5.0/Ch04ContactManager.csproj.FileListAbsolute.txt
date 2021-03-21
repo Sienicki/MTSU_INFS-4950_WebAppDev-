@@ -138,3 +138,6 @@ C:\Users\justi\OneDrive\Desktop\Spring 2021\INFS 4950-001 WebAppDev\MTSU_INFS-49
 C:\Users\justi\OneDrive\Desktop\Spring 2021\INFS 4950-001 WebAppDev\MTSU_INFS-4950_WebAppDev-\Ch04Contact_Manager\obj\Debug\net5.0\ref\Ch04ContactManager.dll
 C:\Users\justi\OneDrive\Desktop\Spring 2021\INFS 4950-001 WebAppDev\MTSU_INFS-4950_WebAppDev-\Ch04Contact_Manager\obj\Debug\net5.0\Ch04ContactManager.pdb
 C:\Users\justi\OneDrive\Desktop\Spring 2021\INFS 4950-001 WebAppDev\MTSU_INFS-4950_WebAppDev-\Ch04Contact_Manager\obj\Debug\net5.0\Ch04ContactManager.genruntimeconfig.cache
+C:\Users\justi\OneDrive\Desktop\Spring 2021\INFS 4950-001 WebAppDev\MTSU_INFS-4950_WebAppDev-\Ch04Contact_Manager\obj\Debug\net5.0\Razor\Views\Contact\AddEdit.cshtml.g.cs
+C:\Users\justi\OneDrive\Desktop\Spring 2021\INFS 4950-001 WebAppDev\MTSU_INFS-4950_WebAppDev-\Ch04Contact_Manager\obj\Debug\net5.0\Razor\Views\Contact\Delete.cshtml.g.cs
+C:\Users\justi\OneDrive\Desktop\Spring 2021\INFS 4950-001 WebAppDev\MTSU_INFS-4950_WebAppDev-\Ch04Contact_Manager\obj\Debug\net5.0\Razor\Views\Contact\Details.cshtml.g.cs

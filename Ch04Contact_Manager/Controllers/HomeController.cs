@@ -22,7 +22,7 @@ namespace Ch04ContactManager.Controllers
         {
             var contacts = context.Contacts
                 .Include(c => c.Category)
-                .OrderBy(c => c.ContactID)
+                .OrderBy(c => c.ContactId)
                 .ToList();
             return View(contacts);
         }
