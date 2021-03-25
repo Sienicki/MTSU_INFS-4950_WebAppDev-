@@ -1,34 +1,42 @@
-﻿@model Contact
+﻿@model Contact;
+
+
 
 @{
-    ViewBag.Title ="Contact Details";
+    ViewBag.Title = "Contact Details";
 }
 <h2>@ViewBag.Title</h2>
 
 
-<form asp-action="Details" method="get">
+<form asp-action="Details" method="post">
 
     <div class="form-group">
-        <label asp-for="F_Name">First Name</label>
-        <label asp-for="F_Name"></label>
+        <label asp-for="F_Name"><strong>First Name</strong></label>
+        <label asp-for="F_Name">@Model.F_Name</label>
     </div>
     <div class="form-group">
-        <label>@ViewBag.L_Name</label>
+        <label asp-for="L_Name"><strong>Last Name</strong></label>
+        <label asp-for="L_Name">@Model.L_Name</label>
     </div>
     <div class="form-group">
-        <label>@ViewBag.PhoneNumber</label>
+        <label asp-for="PhoneNumber"><strong>Phone Number</strong></label>
+        <label asp-for="PhoneNumber">@Model.PhoneNumber</label>
     </div>
     <div class="form-group">
-        <label>@ViewBag.EmailAddress</label>
+        <label asp-for="EmailAddress"><strong>Email Address</strong></label>
+        <label asp-for="EmailAddress">@Model.EmailAddress</label>
     </div>
     <div class="form-group">
-        <label>@ViewBag.Category</label>
+        <label asp-for="Category"><strong>Category</strong></label>
+        <label asp-for="Category">@Model.Category</label>
     </div>
     <div class="form-group">
-        <label>@ViewBag.Organization</label>
+        <label asp-for="Organization"><strong>Organization</strong></label>
+        <label asp-for="Organization">@Model.Organization</label>
     </div>
     <div class="form-group">
-        <label>@ViewBag.DateAdded</label>
+        <label asp-for="DateAdded"><strong>Date Added</strong></label>
+        <label asp-for="DateAdded">@Model.DateAdded</label>
     </div>
 
 

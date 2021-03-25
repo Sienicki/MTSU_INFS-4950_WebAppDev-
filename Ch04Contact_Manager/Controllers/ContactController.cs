@@ -76,10 +76,10 @@ namespace Ch04ContactManager.Controllers
         [HttpGet]
         public IActionResult Details(int id)
         {
-            ViewBag.Action = "Details";
             ViewBag.Categories = context.Categories.OrderBy(c => c.Name).ToList();
             var model = context.Contacts.Find(id);
             return View("Details", model);
         }
+        
     }
 }
