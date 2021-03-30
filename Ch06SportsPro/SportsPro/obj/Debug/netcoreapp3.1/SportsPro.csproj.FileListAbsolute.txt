@@ -560,3 +560,4 @@ C:\Users\justi\OneDrive\Desktop\Spring 2021\INFS 4950-001 WebAppDev\MTSU_INFS-49
 C:\Users\justi\OneDrive\Desktop\Spring 2021\INFS 4950-001 WebAppDev\MTSU_INFS-4950_WebAppDev-\Ch06SportsPro\SportsPro\obj\Debug\netcoreapp3.1\SportsPro.dll
 C:\Users\justi\OneDrive\Desktop\Spring 2021\INFS 4950-001 WebAppDev\MTSU_INFS-4950_WebAppDev-\Ch06SportsPro\SportsPro\obj\Debug\netcoreapp3.1\SportsPro.pdb
 C:\Users\justi\OneDrive\Desktop\Spring 2021\INFS 4950-001 WebAppDev\MTSU_INFS-4950_WebAppDev-\Ch06SportsPro\SportsPro\obj\Debug\netcoreapp3.1\SportsPro.genruntimeconfig.cache
+C:\Users\justi\OneDrive\Desktop\Spring 2021\INFS 4950-001 WebAppDev\MTSU_INFS-4950_WebAppDev-\Ch06SportsPro\SportsPro\obj\Debug\netcoreapp3.1\Razor\Views\Home\About.cshtml.g.cs
