@@ -13,7 +13,7 @@ namespace SportsPro.Controllers
         {
             context = ctx;
         }
-
+        [Route("[controller]s")]
         public IActionResult List()
         {
             List<Product> products = context.Products.OrderBy(p => p.ReleaseDate).ToList();

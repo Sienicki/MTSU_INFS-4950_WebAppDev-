@@ -13,7 +13,7 @@ namespace SportsPro.Controllers
         {
             context = ctx;
         }
-
+        [Route("[controller]s")]
         public IActionResult List()
         {
             List<Customer> customers = context.Customers.OrderBy(c => c.LastName).ToList();
