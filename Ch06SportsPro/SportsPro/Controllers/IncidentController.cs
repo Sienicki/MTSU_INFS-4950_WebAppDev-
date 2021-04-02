@@ -14,6 +14,8 @@ namespace SportsPro.Controllers
         {
             context = ctx;
         }
+
+
         [Route("[controller]s")]
         public IActionResult List()
         {
