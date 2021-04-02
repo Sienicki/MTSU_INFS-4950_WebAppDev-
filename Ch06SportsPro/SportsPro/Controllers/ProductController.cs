@@ -38,17 +38,24 @@ namespace SportsPro.Controllers
         [HttpPost]
         public IActionResult Save(Product product)
         {
+            // Declare string variable to build the specific success message to be stored in TempData
+            string successMessage;
+
             if (ModelState.IsValid)
             {
                 if (product.ProductID == 0)
                 {
                     context.Products.Add(product);
+                    successMessage = product.Name + " was added.";
                 }
                 else
                 {
                     context.Products.Update(product);
+                    successMessage = product.Name + " was updated.";
                 }
                 context.SaveChanges();
+                //Use TempData to store the success message
+                TempData["message"] = successMessage;
                 return RedirectToAction("List");
             }
             else
@@ -75,8 +82,12 @@ namespace SportsPro.Controllers
         [HttpPost]
         public IActionResult Delete(Product product)
         {
-            context.Products.Remove(product);
+            var p = context.Products.Find(product.ProductID);
+            string productName = p.Name;
+            context.Products.Remove(p);
             context.SaveChanges();
+            //Use tempData to store a success message after a successful delete
+            TempData["message"] = productName + " was deleted.";
             return RedirectToAction("List");
         }
     }

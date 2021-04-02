@@ -12,10 +12,9 @@
     <div class="form-group">
         <label asp-for="CustomerID">Customer</label>
         <select asp-for="CustomerID" 
-                asp-items="@(new SelectList(ViewBag.Customers, "CustomerId", "FullName", Model.CustomerID))"
+                asp-items="@(new SelectList(ViewBag.Customers, "CustomerID", "FullName", Model.CustomerID))"
                 class="form-control">
             <option value="">Select a customer...</option>
-           
         </select>
         </div>
 
@@ -25,7 +24,6 @@
                     asp-items="@(new SelectList(ViewBag.Products, "ProductID", "Name", Model.ProductID))"
                     class="form-control">
                 <option value="">Select a product...</option>
-               
             </select>
     </div>
 
