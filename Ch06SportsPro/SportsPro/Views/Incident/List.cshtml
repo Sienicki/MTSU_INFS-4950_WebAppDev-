@@ -5,6 +5,18 @@
 
 <h1>Incident Manager</h1>
 
+<nav class="nav nav-pills mb-3">
+    <a asp-action="List" asp-route-filter="all"
+       class="nav-item nav-link
+        @(Model.Filter == "all" ? "active" : "")"> All incidents</a>
+    <a asp-action="List" asp-route-filter="unassigned"
+       class="nav-item nav-link
+        @(Model.Filter == "unassagned" ? "active" : "")"> Unassigned incidents</a>
+    <a asp-action="List" asp-route-filter="open"
+       class="nav-item nav-link
+        @(Model.Filter == "open" ? "active" : "")"> Open incidents</a>
+
+</nav>
 <table class="table table-bordered table-striped">
     <thead>
         <tr>

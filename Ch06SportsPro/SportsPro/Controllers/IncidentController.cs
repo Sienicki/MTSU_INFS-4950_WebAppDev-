@@ -24,11 +24,24 @@ namespace SportsPro.Controllers
                 filter = "all";
             }
 
-            List<Incident> incidents = context.Incidents
+            IQueryable<Incident> query = context.Incidents
                 .Include(i => i.Customer)
                 .Include(i => i.Product)
-                .OrderBy(i => i.DateOpened)
-                .ToList();
+                .OrderBy(i => i.DateOpened);
+
+            if(filter == "unassigned")
+            {
+                query = query.Where(i => i.TechnicianID == null) ;
+            }
+            if(filter == "open")
+            {
+                query = query.Where(i => i.DateClosed == null);
+            }
+
+            
+            var incidents = query.ToList();
+
+
 
             IncidentsListViewModel model = new IncidentsListViewModel();
             model.Filter = filter;
