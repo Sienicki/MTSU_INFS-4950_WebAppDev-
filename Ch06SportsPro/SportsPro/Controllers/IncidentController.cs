@@ -17,15 +17,25 @@ namespace SportsPro.Controllers
 
 
         [Route("[controller]s")]
-        public IActionResult List()
+        public IActionResult List(string filter)
         {
+            if(filter == null)
+            {
+                filter = "all";
+            }
+
             List<Incident> incidents = context.Incidents
                 .Include(i => i.Customer)
                 .Include(i => i.Product)
                 .OrderBy(i => i.DateOpened)
                 .ToList();
 
-            return View(incidents);
+            IncidentsListViewModel model = new IncidentsListViewModel();
+            model.Filter = filter;
+            model.Incidents = incidents;
+
+
+            return View("List", model);
         }
 
         public void StoreListsInViewBag()
