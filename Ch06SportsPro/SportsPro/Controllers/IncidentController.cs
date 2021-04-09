@@ -56,54 +56,110 @@ namespace SportsPro.Controllers
         [HttpGet]
         public IActionResult Add()
         {
-            ViewBag.Action = "Add";
+            //ViewBag.Action = "Add";
+            //StoreListsInViewBag();
 
-            StoreListsInViewBag();
+            //Instantiate new IncidentViewModel and set the list of
+            //Customers, Technicians, and Products along with setting
+            //the Action property to Add
 
-            return View("AddEdit", new Incident());
+            IncidentViewModel model = new IncidentViewModel();
+            model.Incident = new Incident();
+            model.Action = "Add";
+
+            model.Customers = context.Customers
+                .OrderBy(c => c.FirstName)
+                .ToList();
+            model.Products = context.Products
+                .OrderBy(p => p.Name)
+                .ToList();
+            model.Technicians = context.Technicians
+                .OrderBy(t => t.Name)
+                .ToList();
+
+
+            return View("AddEdit", model);
         }
 
         [HttpGet]
         public IActionResult Edit(int id)
         {
-            ViewBag.Action = "Edit";
+            //ViewBag.Action = "Edit";
+            //StoreListsInViewBag();
 
-            StoreListsInViewBag();
+            //Instantiate a new IncidentViewModel that set the Incident property
+            //to the current INcident object for the id parameter, the Action to
+            //"Edit" and set the list of Customers, Technicians, and Products
 
-            var product = context.Incidents.Find(id);
+            IncidentViewModel model = new IncidentViewModel();
+            var incident = context.Incidents.Find(id);
+            model.Incident = incident;
+            model.Action = "Edit";
+            model.Customers = context.Customers
+                .OrderBy(c => c.FirstName)
+                .ToList();
+            model.Products = context.Products
+                .OrderBy(p => p.Name)
+                .ToList();
+            model.Technicians = context.Technicians
+                .OrderBy(t => t.Name)
+                .ToList();
 
-            return View("AddEdit", product);
+
+            //var product = context.Incidents.Find(id);
+
+            return View("AddEdit", model);
         }
 
         [HttpPost]
-        public IActionResult Save(Incident incident)
+        public IActionResult Save(IncidentViewModel incidentView)
         {
+            string successMessage;
             if (ModelState.IsValid)
             {
-                if (incident.IncidentID == 0)
+                if (incidentView.Action == "Add")
                 {
-                    context.Incidents.Add(incident);
+                    context.Incidents.Add(incidentView.Incident);
+                    successMessage = incidentView.Incident.Title + " was added.";
                 }
                 else
                 {
-                    context.Incidents.Update(incident);
+                    context.Incidents.Update(incidentView.Incident);
+                    successMessage = incidentView.Incident.Title + " was updated.";
                 }
                 context.SaveChanges();
+                TempData["message"] = successMessage;
                 return RedirectToAction("List");
             }
             else
             {
-                StoreListsInViewBag();
-                if (incident.IncidentID == 0)
+                //StoreListsInViewBag();
+                IncidentViewModel model = new IncidentViewModel();
+                var incident = context.Incidents.Find(incidentView.Incident.IncidentID);
+                model.Incident = incident;
+
+                if (incidentView.Action == "Add")
                 {
-                    ViewBag.Action = "Add";
+                    model.Action = "Add";
+                    //ViewBag.Action = "Add";
                 }
                 else
                 {
-                    ViewBag.Action = "Edit";
+                    model.Action = "Edit";
+                    //ViewBag.Action = "Edit";
                 }
 
-                return View("AddEdit", incident);
+                model.Customers = context.Customers
+                    .OrderBy(c => c.FirstName)
+                    .ToList();
+                model.Products = context.Products
+                    .OrderBy(p => p.Name)
+                    .ToList();
+                model.Technicians = context.Technicians
+                    .OrderBy(t => t.Name)
+                    .ToList();
+
+                return View("AddEdit", model);
             }
         }
 
