@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "dgSpecHash": "hAWI3FeN7MnNzlVReRPDa8RSj2tG8LB7eExb2FRbZg5vBeZjW/Y+OfvkUPPZYpMvqOAXF6MI95TMSeAA4E/8yQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\justi\\OneDrive\\Desktop\\Spring 2021\\INFS 4950-001 WebAppDev\\MTSU_INFS-4950_WebAppDev-\\It_Takes_A_Village\\It_Takes_A_Village.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\justi\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.5\\microsoft.entityframeworkcore.5.0.5.nupkg.sha512",
+    "C:\\Users\\justi\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.5\\microsoft.entityframeworkcore.abstractions.5.0.5.nupkg.sha512",
+    "C:\\Users\\justi\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.5\\microsoft.entityframeworkcore.analyzers.5.0.5.nupkg.sha512",
+    "C:\\Users\\justi\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\5.0.0\\microsoft.extensions.caching.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\justi\\.nuget\\packages\\microsoft.extensions.caching.memory\\5.0.0\\microsoft.extensions.caching.memory.5.0.0.nupkg.sha512",
+    "C:\\Users\\justi\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.1\\microsoft.extensions.dependencyinjection.5.0.1.nupkg.sha512",
+    "C:\\Users\\justi\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\justi\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",
+    "C:\\Users\\justi\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\justi\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
+    "C:\\Users\\justi\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\justi\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
+    "C:\\Users\\justi\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
+    "C:\\Users\\justi\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
