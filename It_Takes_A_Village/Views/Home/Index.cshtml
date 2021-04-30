@@ -1,8 +1,33 @@
-﻿@{
+﻿@model List<Member>;
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<a asp-controller="Member" asp-action="Add">Add Member</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Phone</th>
+            <th>Profession</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var member in Model)
+        {
+            <tr>
+                <td><a asp-controller="Member" asp-action="Details" asp-route-id="@member.MemberId">@member.F_Name</a></td>
+                <td><a asp-controller="Member" asp-action="Details" asp-route-id="@member.MemberId">@member.L_Name</a></td>
+                <td>@member.PhoneNumber</td>
+                <td>@member.Profession.Title</td>
+                <td>
+                    <a asp-controller="Member" asp-action="Edit" asp-route-id="@member.MemberId">Edit</a>
+                    <a asp-controller="Member" asp-action="Delete" asp-route-id="@member.MemberId">Delete</a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>

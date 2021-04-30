@@ -17,9 +17,10 @@ namespace It_Takes_A_Village.Models
         public string? PhoneNumber { get; set; }
         [Required(ErrorMessage = "Please enter an email address: ")]
         public string? EmailAddress { get; set; }
-        public string? Hobby { get; set; }
+        public string Hobby { get; set; }
         public DateTime DateAdded { get; set; }
         public int ProfessionId { get; set; }
-        public Profession Job { get; set; }
+        public Profession Profession { get; set; }
     }
 }
+
