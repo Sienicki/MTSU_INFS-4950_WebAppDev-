@@ -26,6 +26,17 @@ namespace It_Takes_A_Village.Controllers
                 .ToList();
             return View(members);
         }
+        public IActionResult Index(string searchBy, string search)
+        {
+            if(searchBy == "Profession")
+            {
+                return View(db.Members.Where(x => x.Profession.StartsWith(search)).ToList());
+            }
+            else if(searchBy == "Name")
+            {
+                return View(db.Member.Where(x => x.Name.StartsWith(search)).ToList());
+            }
+        }
 
         
     }
